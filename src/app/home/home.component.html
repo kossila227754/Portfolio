@@ -1,0 +1,76 @@
+<section class="home-section">
+  <div class="home-container">
+    
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="gradient-text">Full Stack Junior Developer</h1>
+    <h2 class="title">Komedja Kossi David</h2>
+    <p class="hero-subtitle">Passionate about creating innovative web solutions and exploring new technologies. 
+      Specialized in building modern applications using Angular, .NET, and various cutting-edge technologies.</p>
+  </div>
+</section>
+
+    <div class="skills-section">
+      <h2>Skills & Expertise</h2>
+      <div class="cards-container">
+        @for (skillGroup of skills; track skillGroup.category) {
+          <div class="card" [@skillsAnimation]>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>{{ skillGroup.category }}</h3>
+              </div>
+              <div class="card-body">
+                <ul [@itemsAnimation]="skillGroup.items.length">
+                  @for (skill of skillGroup.items; track skill) {
+                    <li>{{ skill }}</li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="experience-section">
+      <h2>Expérience Professionnelle</h2>
+      <div class="cards-container">
+        @for (exp of experiences; track exp.title) {
+          <div class="card">
+            <div class="card-content">
+              <div class="card-header">
+                <span class="icon">{{ exp.icon }}</span>
+                <h3>{{ exp.title }}</h3>
+              </div>
+              <div class="card-body">
+                <h4>{{ exp.company }}</h4>
+                <span class="period">{{ exp.period }}</span>
+                <p>{{ exp.description }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <h2>Formation</h2>
+      <div class="cards-container">
+        @for (edu of education; track edu.title) {
+          <div class="card">
+            <div class="card-content">
+              <div class="card-header">
+                <span class="icon">{{ edu.icon }}</span>
+                <h3>{{ edu.title }}</h3>
+              </div>
+              <div class="card-body">
+                <h4>{{ edu.institution }}</h4>
+                <span class="location">{{ edu.location }}</span>
+                <span class="period">{{ edu.period }}</span>
+                <p>{{ edu.description }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

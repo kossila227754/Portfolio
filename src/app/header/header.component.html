@@ -1,10 +1,8 @@
 <header class="header">
   <nav class="nav-pill">
     @for (item of menuItems; track item.path) {
-      <a [routerLink]="item.path" routerLinkActive="active">{{ item.label }}</a>
+    <a [routerLink]="item.path" routerLinkActive="active">{{ item.label }}</a>
     }
-    <button class="theme-btn">
-      <i class="fas fa-moon"></i>
-    </button>
+    <button class="theme-btn"></button>
   </nav>
 </header>

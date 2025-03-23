@@ -104,7 +104,6 @@
 
 .skills-section {
   margin-bottom: 4rem;
-  
 }
 
 .skills-section h2 {
@@ -118,11 +117,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  
 }
 
 .skill-category {
-background-color: #1f1f21;
+  background-color: #1f1f21;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -142,7 +140,7 @@ background-color: #1f1f21;
 }
 
 .skill-category h3::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -170,7 +168,7 @@ background-color: #1f1f21;
 }
 
 .skill-category li::before {
-  content: '▹';
+  content: "▹";
   color: #007bff;
   margin-right: 10px;
 }
@@ -286,12 +284,14 @@ background-color: #1f1f21;
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), 
-              rgba(255, 255, 255, 0.06),
-              transparent 40%);
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -326,7 +326,8 @@ background-color: #1f1f21;
   margin: 0.5rem 0;
 }
 
-.period, .location {
+.period,
+.location {
   display: block;
   color: #666;
   font-size: 0.9rem;
@@ -392,6 +393,29 @@ background-color: #1f1f21;
   letter-spacing: -2px;
 }
 
+/* Add responsive styles for mobile */
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-content .title {
+    font-size: 1.5rem;
+  }
+
+  .hero-content .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  .gradient-text {
+    font-size: 2.5rem;
+  }
+}
 .hero-subtitle {
   font-size: 1.5rem;
   color: #fff;

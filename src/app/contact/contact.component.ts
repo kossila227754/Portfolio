@@ -10,10 +10,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class ContactComponent {
   contactInfo = {
-    email: 'your.email@example.com',
-    phone: '+1234567890',
-    location: 'Belgium',
-    availability: 'Open to opportunities'
+    email: 'komedja.david@gmail.com',
+    phone: '+32 456 78 90 12',
+    location: 'Brussels, Belgium',
+    availability: 'Available for Full-time Opportunities'
   };
 
   socialLinks = [
